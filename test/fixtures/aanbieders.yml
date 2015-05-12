@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  naam: MyString
+  automerk: MyString
+  stroom: MyString
+  prijs: 1
+
+two:
+  naam: MyString
+  automerk: MyString
+  stroom: MyString
+  prijs: 1

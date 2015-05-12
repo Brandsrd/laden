@@ -1,0 +1,2 @@
+module AanbiedersHelper
+end

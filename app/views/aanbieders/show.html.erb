@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Naam:</strong>
+  <%= @aanbieder.naam %>
+</p>
+
+<p>
+  <strong>Automerk:</strong>
+  <%= @aanbieder.automerk %>
+</p>
+
+<p>
+  <strong>Stroom:</strong>
+  <%= @aanbieder.stroom %>
+</p>
+
+<p>
+  <strong>Prijs:</strong>
+  <%= @aanbieder.prijs %>
+</p>
+
+<%= link_to 'Edit', edit_aanbieder_path(@aanbieder) %> |
+<%= link_to 'Back', aanbieders_path %>

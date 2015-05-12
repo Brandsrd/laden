@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Aanbieders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Naam</th>
+      <th>Automerk</th>
+      <th>Stroom</th>
+      <th>Prijs</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aanbieders.each do |aanbieder| %>
+      <tr>
+        <td><%= aanbieder.naam %></td>
+        <td><%= aanbieder.automerk %></td>
+        <td><%= aanbieder.stroom %></td>
+        <td><%= aanbieder.prijs %></td>
+        <td><%= link_to 'Show', aanbieder %></td>
+        <td><%= link_to 'Edit', edit_aanbieder_path(aanbieder) %></td>
+        <td><%= link_to 'Destroy', aanbieder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aanbieder', new_aanbieder_path %>

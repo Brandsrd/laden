@@ -1,0 +1,33 @@
+<%= form_for(@aanbieder) do |f| %>
+  <% if @aanbieder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aanbieder.errors.count, "error") %> prohibited this aanbieder from being saved:</h2>
+
+      <ul>
+      <% @aanbieder.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :naam %><br>
+    <%= f.text_field :naam %>
+  </div>
+  <div class="field">
+    <%= f.label :automerk %><br>
+    <%= f.text_field :automerk %>
+  </div>
+  <div class="field">
+    <%= f.label :stroom %><br>
+    <%= f.text_field :stroom %>
+  </div>
+  <div class="field">
+    <%= f.label :prijs %> (kwh)<br>
+    <%= f.number_field :prijs %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
