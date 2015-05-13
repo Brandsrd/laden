@@ -16,5 +16,50 @@ body {
   padding: 150px 0;
   background-size: cover;
   height: 800px;
+  margin-top: -80px;
 
+  h1 {
+    font-size: 70px;
+    color: white;
+    }
+  p {
+    font-size: 25px;
+    font-weight: 100;
+  }
+}
+.card{
+  padding: 10px;
+  font-weight: 300;
+  h2{
+    font-size: 22px;
+  }
+}
+
+#banner, #description, #newsletter {
+  position: relative;
+}
+
+#newsletter h2 {
+  margin-top: 1em;
+  text-transform: upcase;
+  font-size: 60px;
+  }
+
+.scroll-btn{
+  position: absolute;
+  width: 100px;
+  margin-left: -50px;
+  bottom: 20px;
+  left: 50%;
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  &:hover{
+    color: white;
+  }
+}
+
+.img-circle {
+  height: 200px;
+  width: 200px;
 }
