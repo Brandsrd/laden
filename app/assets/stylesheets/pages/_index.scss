@@ -1,1 +1,20 @@
 @import "home";
+
+//anders komt de body onder de navbar terecht.
+body {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.green-bg {
+  background-color: #CD8324;
+}
+
+#banner {
+  background-image: image-url('car.jpg');
+  color: white;
+  padding: 150px 0;
+  background-size: cover;
+  height: 800px;
+
+}

@@ -1,15 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 
-<h1>Listing Aanbieders</h1>
+
 
 
 <div class="row">
   <div class="col-xs-12 col-sm-12">
     <!-- Banner -->
     <div id="banner">
-    <H1>Welcome to Lapland!</H1>
-    <H2>Look at these beautiful pictures!</H2>
+    <h1>Goedkoop en snel laden!</h1>
     <table>
       <thead>
         <tr>
@@ -37,36 +36,35 @@
      </table>
 
       <br>
-      <%= link_to 'New Aanbieder', new_aanbieder_path %>
-        <br>
-        <a class='btn btn-success' href='#book'>Boek nu!</a>
+      <%= link_to 'New Aanbieder', new_aanbieder_path, class:'btn btn-danger'%>
     </div>
   </div>
 </div>
 
 
 
-    <div class="green-bg padded ">
+
+    <div class="green-bg padded">
       <div class="row">
         <div class="col-xs-12 col-sm-4">
           <div class="card">
-          <img src="../images/lapland_dogs.jpg" class="img-circle">
-          <h2>Dogs</h2>
-          <p>Go and ride with our<strong> dogs</strong></p>
+          <img src="../images/laadpaal.jpg" class="img-circle">
+          <h2>Aanbieders</h2>
+          <p>Kijk of er een laadpaal in de<strong> buurt</strong> is</p>
           </div>
         </div>
         <div class="col-xs-12 col-sm-4">
           <div class="card">
-          <img src="../images/lapland_fire.jpg" class="img-circle">
-          <h2>Fire</h2>
-          <p>Come and make a<strong> fire</strong></p>
+          <img src="../images/car.jpg" class="img-circle">
+          <h2>Car</h2>
+          <p>Kijk of jouw auto<strong> opgeladen</strong> kan worden</p>
           </div>
         </div>
         <div class="col-xs-12 col-sm-4">
           <div class="card">
           <img src="../images/lapland_fishing.jpg" class="img-circle">
-          <h2>Fishing</h2>
-          <p>Go wet and wild and eat some<strong> fish</strong></p>
+          <h2>Prijs</h2>
+          <p>Voor hoeveel<strong> euro</strong> ben ik weer onderweg?</p>
           </div>
         </div>
       </div>
@@ -110,9 +108,9 @@
         <div id="map" style="width: 100%; height: 400px;">
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
         <script type="text/javascript">
-        var myLatlng = new google.maps.LatLng(48.852937,2.364178);
+        var myLatlng = new google.maps.LatLng(52.339408,4.897288);
         var myOptions = {
-          zoom: 16,
+          zoom: 14,
           center: myLatlng,
           scrollwheel: false,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -138,7 +136,7 @@
           <li><a href="http://www.facebook.com/ruben.brands"><i class="fa fa-facebook"></i></a></li>
           <li><a href="http://www.twitter.com/rdbrands"><i class="fa fa-twitter"></i></a></li>
         </ul>
-        <p>Lapland is powered bij Rubinito!</p>
+        <p>Goedkoop en snel laden is powered by <a href="http://www.rubenbrands.com">rdbrands</a></p>
       </div>
     </div>
   </div>
