@@ -1,33 +1,156 @@
 <p id="notice"><%= notice %></p>
 
+
 <h1>Listing Aanbieders</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Naam</th>
-      <th>Automerk</th>
-      <th>Stroom</th>
-      <th>Prijs</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @aanbieders.each do |aanbieder| %>
-      <tr>
-        <td><%= aanbieder.naam %></td>
-        <td><%= aanbieder.automerk %></td>
-        <td><%= aanbieder.stroom %></td>
-        <td><%= aanbieder.prijs %></td>
-        <td><%= link_to 'Show', aanbieder %></td>
-        <td><%= link_to 'Edit', edit_aanbieder_path(aanbieder) %></td>
-        <td><%= link_to 'Destroy', aanbieder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-xs-12 col-sm-12">
+    <!-- Banner -->
+    <div id="banner">
+    <H1>Welcome to Lapland!</H1>
+    <H2>Look at these beautiful pictures!</H2>
+    <table>
+      <thead>
+        <tr>
+          <th>Naam</th>
+          <th>Automerk</th>
+          <th>Stroom</th>
+          <th>Prijs</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<br>
+      <tbody>
+        <% @aanbieders.each do |aanbieder| %>
+          <tr>
+            <td><%= aanbieder.naam %></td>
+            <td><%= aanbieder.automerk %></td>
+            <td><%= aanbieder.stroom %></td>
+            <td><%= aanbieder.prijs %></td>
+            <td><%= link_to 'Show', aanbieder %></td>
+            <td><%= link_to 'Edit', edit_aanbieder_path(aanbieder) %></td>
+            <td><%= link_to 'Destroy', aanbieder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+     </table>
 
-<%= link_to 'New Aanbieder', new_aanbieder_path %>
+      <br>
+      <%= link_to 'New Aanbieder', new_aanbieder_path %>
+        <br>
+        <a class='btn btn-success' href='#book'>Boek nu!</a>
+    </div>
+  </div>
+</div>
+
+
+
+    <div class="green-bg padded ">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <div class="card">
+          <img src="../images/lapland_dogs.jpg" class="img-circle">
+          <h2>Dogs</h2>
+          <p>Go and ride with our<strong> dogs</strong></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card">
+          <img src="../images/lapland_fire.jpg" class="img-circle">
+          <h2>Fire</h2>
+          <p>Come and make a<strong> fire</strong></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card">
+          <img src="../images/lapland_fishing.jpg" class="img-circle">
+          <h2>Fishing</h2>
+          <p>Go wet and wild and eat some<strong> fish</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <div class="text" id="book" >
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+              <div class="col-sm-3">
+              <input type="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                  <label><input type="checkbox">Please sent me the monthly newsletter!</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+  <!-- Map -->
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <div id="map" style="width: 100%; height: 400px;">
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+        <script type="text/javascript">
+        var myLatlng = new google.maps.LatLng(48.852937,2.364178);
+        var myOptions = {
+          zoom: 16,
+          center: myLatlng,
+          scrollwheel: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          styles: [{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#aee2e0"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#abce83"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#769E72"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#7B8758"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"color":"#EBF4A4"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#8dab68"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#5B5B3F"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ABCE83"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#A4C67D"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#9BBF72"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#EBF4A4"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#87ae79"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#7f2200"},{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"},{"visibility":"on"},{"weight":4.1}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#495421"}]},{"featureType":"administrative.neighborhood","elementType":"labels","stylers":[{"visibility":"off"}]}] // TODO: replace [] by array from https://snazzymaps.com/
+        };
+        var map = new google.maps.Map(document.getElementById('map'), myOptions);
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: "You are here!"
+        });
+        </script>
+        </div>
+      </div>
+    </div>
+
+  <!-- Footer -->
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12">
+      <div id="footer">
+        <ul class="list-inline">
+          <li><a href="http://www.facebook.com/ruben.brands"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="http://www.twitter.com/rdbrands"><i class="fa fa-twitter"></i></a></li>
+        </ul>
+        <p>Lapland is powered bij Rubinito!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+
